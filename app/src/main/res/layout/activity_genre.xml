@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GenreActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/sky_500"
+        android:indeterminateTintMode="src_atop"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_genre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        tools:listitem="@layout/item_genre" />
+</RelativeLayout>
